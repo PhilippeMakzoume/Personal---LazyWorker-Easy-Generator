@@ -1,4 +1,5 @@
-﻿using LazyGenerator_V2.Sources.Pets;
+﻿using LazyGenerator_V2.Sources.Image;
+using LazyGenerator_V2.Sources.Pets;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,11 @@ namespace LazyGenerator_V2
         }
 
         // ========================= Items ============================ //
+        private void txt_ItemIconName_TextChanged(object sender, EventArgs e)
+        {
+            LoadImageFromUrl.LoadIconFromWoWHead(ItemPictureBox, txt_ItemIconName.Text);
+        }
+
         private void btn_ItemStoreDictionary_Click(object sender, EventArgs e)
         {
 

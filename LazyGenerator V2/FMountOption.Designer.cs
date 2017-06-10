@@ -68,12 +68,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbx_ItemType = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.ItemPictureBox = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -248,6 +250,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.ItemPictureBox);
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.cbx_ItemType);
             this.tabPage3.Controls.Add(this.btn_ItemGenerate);
@@ -360,10 +363,11 @@
             // 
             // txt_ItemIconName
             // 
-            this.txt_ItemIconName.Location = new System.Drawing.Point(100, 175);
+            this.txt_ItemIconName.Location = new System.Drawing.Point(97, 175);
             this.txt_ItemIconName.Name = "txt_ItemIconName";
-            this.txt_ItemIconName.Size = new System.Drawing.Size(238, 20);
+            this.txt_ItemIconName.Size = new System.Drawing.Size(180, 20);
             this.txt_ItemIconName.TabIndex = 10;
+            this.txt_ItemIconName.TextChanged += new System.EventHandler(this.txt_ItemIconName_TextChanged);
             // 
             // txt_ItemDisplayID
             // 
@@ -374,9 +378,9 @@
             // 
             // txt_ItemName
             // 
-            this.txt_ItemName.Location = new System.Drawing.Point(100, 147);
+            this.txt_ItemName.Location = new System.Drawing.Point(97, 147);
             this.txt_ItemName.Name = "txt_ItemName";
-            this.txt_ItemName.Size = new System.Drawing.Size(238, 20);
+            this.txt_ItemName.Size = new System.Drawing.Size(180, 20);
             this.txt_ItemName.TabIndex = 8;
             // 
             // txt_ItemID
@@ -470,6 +474,15 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Item Type :";
             // 
+            // ItemPictureBox
+            // 
+            this.ItemPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ItemPictureBox.Location = new System.Drawing.Point(285, 147);
+            this.ItemPictureBox.Name = "ItemPictureBox";
+            this.ItemPictureBox.Size = new System.Drawing.Size(56, 58);
+            this.ItemPictureBox.TabIndex = 18;
+            this.ItemPictureBox.TabStop = false;
+            // 
             // FMountOption
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,6 +502,7 @@
             this.tabPage3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -535,5 +549,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbx_ItemType;
+        private System.Windows.Forms.PictureBox ItemPictureBox;
     }
 }

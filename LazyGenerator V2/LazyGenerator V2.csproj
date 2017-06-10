@@ -62,6 +62,7 @@
     <Compile Include="Sources\Gems\GemGenerator.cs" />
     <Compile Include="Sources\Gems\GemItemEnchantementGenerator.cs" />
     <Compile Include="Sources\Gems\GemSQLGenerator.cs" />
+    <Compile Include="Sources\Image\LoadImageFromUrl.cs" />
     <Compile Include="Sources\Models\ModelDataGenerator.cs" />
     <Compile Include="Sources\Mounts\MountGenerator.cs" />
     <Compile Include="Sources\Item\ItemGenerator.cs" />

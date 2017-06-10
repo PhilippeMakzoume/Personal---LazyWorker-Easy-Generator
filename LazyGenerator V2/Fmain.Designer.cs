@@ -31,7 +31,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.callmephilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acWebPhilippovitchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modelChangingCallmephilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -56,6 +59,7 @@
             this.txtPetName = new System.Windows.Forms.TextBox();
             this.txtPetSpellID = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.MountPictureBox = new System.Windows.Forms.PictureBox();
             this.btnMoreOption = new System.Windows.Forms.Button();
             this.btnResetMount = new System.Windows.Forms.Button();
             this.btnSaveDictionary = new System.Windows.Forms.Button();
@@ -167,15 +171,14 @@
             this.txtTitleMale = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.callmephilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acWebPhilippovitchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modelChangingCallmephilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PetPictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MountPictureBox)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -194,6 +197,7 @@
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PetPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -223,6 +227,12 @@
             this.optionToolStripMenuItem1.Size = new System.Drawing.Size(81, 20);
             this.optionToolStripMenuItem1.Text = "Contributor";
             // 
+            // callmephilToolStripMenuItem
+            // 
+            this.callmephilToolStripMenuItem.Name = "callmephilToolStripMenuItem";
+            this.callmephilToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.callmephilToolStripMenuItem.Text = "Callmephil";
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -231,6 +241,18 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // acWebPhilippovitchToolStripMenuItem
+            // 
+            this.acWebPhilippovitchToolStripMenuItem.Name = "acWebPhilippovitchToolStripMenuItem";
+            this.acWebPhilippovitchToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.acWebPhilippovitchToolStripMenuItem.Text = "Ac-Web - Philippovitch";
+            // 
+            // modelChangingCallmephilToolStripMenuItem
+            // 
+            this.modelChangingCallmephilToolStripMenuItem.Name = "modelChangingCallmephilToolStripMenuItem";
+            this.modelChangingCallmephilToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.modelChangingCallmephilToolStripMenuItem.Text = "Model-Changing - Callmephil";
             // 
             // tabPage2
             // 
@@ -365,7 +387,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(2, 51);
+            this.label12.Location = new System.Drawing.Point(6, 51);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(104, 13);
             this.label12.TabIndex = 11;
@@ -396,6 +418,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.PetPictureBox);
             this.groupBox4.Controls.Add(this.txtPetIcon);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.txtPetIconID);
@@ -412,15 +435,16 @@
             // 
             // txtPetIcon
             // 
-            this.txtPetIcon.Location = new System.Drawing.Point(77, 84);
+            this.txtPetIcon.Location = new System.Drawing.Point(79, 104);
             this.txtPetIcon.Name = "txtPetIcon";
             this.txtPetIcon.Size = new System.Drawing.Size(177, 20);
             this.txtPetIcon.TabIndex = 15;
+            this.txtPetIcon.TextChanged += new System.EventHandler(this.txtPetIcon_TextChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(4, 87);
+            this.label11.Location = new System.Drawing.Point(6, 107);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 13);
             this.label11.TabIndex = 14;
@@ -429,7 +453,7 @@
             // txtPetIconID
             // 
             this.txtPetIconID.Enabled = false;
-            this.txtPetIconID.Location = new System.Drawing.Point(260, 84);
+            this.txtPetIconID.Location = new System.Drawing.Point(262, 104);
             this.txtPetIconID.Name = "txtPetIconID";
             this.txtPetIconID.Size = new System.Drawing.Size(38, 20);
             this.txtPetIconID.TabIndex = 13;
@@ -437,7 +461,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(4, 54);
+            this.label9.Location = new System.Drawing.Point(6, 74);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(67, 13);
             this.label9.TabIndex = 12;
@@ -446,7 +470,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(4, 22);
+            this.label10.Location = new System.Drawing.Point(6, 42);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 13);
             this.label10.TabIndex = 11;
@@ -454,14 +478,14 @@
             // 
             // txtPetName
             // 
-            this.txtPetName.Location = new System.Drawing.Point(77, 51);
+            this.txtPetName.Location = new System.Drawing.Point(79, 71);
             this.txtPetName.Name = "txtPetName";
-            this.txtPetName.Size = new System.Drawing.Size(178, 20);
+            this.txtPetName.Size = new System.Drawing.Size(177, 20);
             this.txtPetName.TabIndex = 10;
             // 
             // txtPetSpellID
             // 
-            this.txtPetSpellID.Location = new System.Drawing.Point(77, 19);
+            this.txtPetSpellID.Location = new System.Drawing.Point(79, 39);
             this.txtPetSpellID.Name = "txtPetSpellID";
             this.txtPetSpellID.Size = new System.Drawing.Size(104, 20);
             this.txtPetSpellID.TabIndex = 9;
@@ -470,6 +494,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.MountPictureBox);
             this.tabPage1.Controls.Add(this.btnMoreOption);
             this.tabPage1.Controls.Add(this.btnResetMount);
             this.tabPage1.Controls.Add(this.btnSaveDictionary);
@@ -483,6 +508,15 @@
             this.tabPage1.Size = new System.Drawing.Size(568, 318);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mount Generator";
+            // 
+            // MountPictureBox
+            // 
+            this.MountPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MountPictureBox.Location = new System.Drawing.Point(301, 6);
+            this.MountPictureBox.Name = "MountPictureBox";
+            this.MountPictureBox.Size = new System.Drawing.Size(56, 58);
+            this.MountPictureBox.TabIndex = 7;
+            this.MountPictureBox.TabStop = false;
             // 
             // btnMoreOption
             // 
@@ -533,9 +567,9 @@
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.cbm_Language);
             this.groupBox3.Controls.Add(this.cbxMountParseWoWhead);
-            this.groupBox3.Location = new System.Drawing.Point(301, 6);
+            this.groupBox3.Location = new System.Drawing.Point(363, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(259, 145);
+            this.groupBox3.Size = new System.Drawing.Size(193, 184);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Options";
@@ -586,7 +620,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(198, 16);
+            this.label1.Location = new System.Drawing.Point(132, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 2;
@@ -601,7 +635,7 @@
             "FR",
             "ES",
             "RU"});
-            this.cbm_Language.Location = new System.Drawing.Point(201, 33);
+            this.cbm_Language.Location = new System.Drawing.Point(135, 33);
             this.cbm_Language.Name = "cbm_Language";
             this.cbm_Language.Size = new System.Drawing.Size(52, 21);
             this.cbm_Language.TabIndex = 1;
@@ -1665,23 +1699,14 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "Title Name Male :";
             // 
-            // callmephilToolStripMenuItem
+            // PetPictureBox
             // 
-            this.callmephilToolStripMenuItem.Name = "callmephilToolStripMenuItem";
-            this.callmephilToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.callmephilToolStripMenuItem.Text = "Callmephil";
-            // 
-            // acWebPhilippovitchToolStripMenuItem
-            // 
-            this.acWebPhilippovitchToolStripMenuItem.Name = "acWebPhilippovitchToolStripMenuItem";
-            this.acWebPhilippovitchToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.acWebPhilippovitchToolStripMenuItem.Text = "Ac-Web - Philippovitch";
-            // 
-            // modelChangingCallmephilToolStripMenuItem
-            // 
-            this.modelChangingCallmephilToolStripMenuItem.Name = "modelChangingCallmephilToolStripMenuItem";
-            this.modelChangingCallmephilToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.modelChangingCallmephilToolStripMenuItem.Text = "Model-Changing - Callmephil";
+            this.PetPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PetPictureBox.Location = new System.Drawing.Point(254, 7);
+            this.PetPictureBox.Name = "PetPictureBox";
+            this.PetPictureBox.Size = new System.Drawing.Size(56, 58);
+            this.PetPictureBox.TabIndex = 8;
+            this.PetPictureBox.TabStop = false;
             // 
             // Fmain
             // 
@@ -1706,6 +1731,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MountPictureBox)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1737,6 +1763,7 @@
             this.groupBox9.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PetPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1886,6 +1913,8 @@
         private System.Windows.Forms.ToolStripMenuItem callmephilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acWebPhilippovitchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modelChangingCallmephilToolStripMenuItem;
+        private System.Windows.Forms.PictureBox MountPictureBox;
+        private System.Windows.Forms.PictureBox PetPictureBox;
     }
 }
 

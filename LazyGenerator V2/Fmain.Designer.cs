@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fmain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +52,7 @@
             this.txtPetDisplayID = new System.Windows.Forms.TextBox();
             this.txtPetCreatureID = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.PetPictureBox = new System.Windows.Forms.PictureBox();
             this.txtPetIcon = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtPetIconID = new System.Windows.Forms.TextBox();
@@ -171,12 +173,12 @@
             this.txtTitleMale = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.PetPictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PetPictureBox)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MountPictureBox)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -197,7 +199,6 @@
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PetPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -432,6 +433,15 @@
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Spell";
+            // 
+            // PetPictureBox
+            // 
+            this.PetPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PetPictureBox.Location = new System.Drawing.Point(254, 7);
+            this.PetPictureBox.Name = "PetPictureBox";
+            this.PetPictureBox.Size = new System.Drawing.Size(56, 58);
+            this.PetPictureBox.TabIndex = 8;
+            this.PetPictureBox.TabStop = false;
             // 
             // txtPetIcon
             // 
@@ -1699,15 +1709,6 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "Title Name Male :";
             // 
-            // PetPictureBox
-            // 
-            this.PetPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PetPictureBox.Location = new System.Drawing.Point(254, 7);
-            this.PetPictureBox.Name = "PetPictureBox";
-            this.PetPictureBox.Size = new System.Drawing.Size(56, 58);
-            this.PetPictureBox.TabIndex = 8;
-            this.PetPictureBox.TabStop = false;
-            // 
             // Fmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1716,6 +1717,7 @@
             this.ClientSize = new System.Drawing.Size(576, 373);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Fmain";
             this.ShowIcon = false;
@@ -1730,6 +1732,7 @@
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PetPictureBox)).EndInit();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MountPictureBox)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -1763,7 +1766,6 @@
             this.groupBox9.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PetPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -8,3 +8,13 @@ C:\Users\Phil1\Documents\Visual Studio 2017\Projects\LazyGenerator V2\LazyGenera
 C:\Users\Phil1\Documents\Visual Studio 2017\Projects\LazyGenerator V2\LazyGenerator V2\obj\Release\LazyGenerator V2.pdb
 C:\Users\Phil1\Documents\Visual Studio 2017\Projects\LazyGenerator V2\LazyGenerator V2\obj\Release\LazyGenerator_V2.FMountOption.resources
 C:\Users\Phil1\Documents\Visual Studio 2017\Projects\LazyGenerator V2\LazyGenerator V2\obj\Release\LazyGenerator V2.csprojResolveAssemblyReference.cache
+C:\Users\Phil1\Documents\Visual Studio 2017\Projects\LazyWorker\LazyGenerator V2\bin\Release\LazyGenerator V2.exe.config
+C:\Users\Phil1\Documents\Visual Studio 2017\Projects\LazyWorker\LazyGenerator V2\bin\Release\LazyGenerator V2.exe
+C:\Users\Phil1\Documents\Visual Studio 2017\Projects\LazyWorker\LazyGenerator V2\bin\Release\LazyGenerator V2.pdb
+C:\Users\Phil1\Documents\Visual Studio 2017\Projects\LazyWorker\LazyGenerator V2\obj\Release\LazyGenerator V2.csprojResolveAssemblyReference.cache
+C:\Users\Phil1\Documents\Visual Studio 2017\Projects\LazyWorker\LazyGenerator V2\obj\Release\LazyGenerator_V2.Fmain.resources
+C:\Users\Phil1\Documents\Visual Studio 2017\Projects\LazyWorker\LazyGenerator V2\obj\Release\LazyGenerator_V2.FMountOption.resources
+C:\Users\Phil1\Documents\Visual Studio 2017\Projects\LazyWorker\LazyGenerator V2\obj\Release\LazyGenerator_V2.Properties.Resources.resources
+C:\Users\Phil1\Documents\Visual Studio 2017\Projects\LazyWorker\LazyGenerator V2\obj\Release\LazyGenerator V2.csproj.GenerateResource.Cache
+C:\Users\Phil1\Documents\Visual Studio 2017\Projects\LazyWorker\LazyGenerator V2\obj\Release\LazyGenerator V2.exe
+C:\Users\Phil1\Documents\Visual Studio 2017\Projects\LazyWorker\LazyGenerator V2\obj\Release\LazyGenerator V2.pdb

@@ -28,25 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMountOption));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txt_CreatureDisplayId = new System.Windows.Forms.TextBox();
-            this.txt_Texture3 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txt_Texture1 = new System.Windows.Forms.TextBox();
-            this.txt_Texture2 = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txt_CreatureModelData = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_CreatureModelName = new System.Windows.Forms.TextBox();
-            this.btn_GenerateModel = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.ItemPictureBox = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbx_ItemType = new System.Windows.Forms.ComboBox();
             this.btn_ItemGenerate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbx_WoWHead = new System.Windows.Forms.CheckBox();
@@ -66,16 +53,30 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbx_ItemType = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.ItemPictureBox = new System.Windows.Forms.PictureBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_CreatureDisplayId = new System.Windows.Forms.TextBox();
+            this.txt_Texture3 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_Texture1 = new System.Windows.Forms.TextBox();
+            this.txt_Texture2 = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_CreatureModelData = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_CreatureModelName = new System.Windows.Forms.TextBox();
+            this.btn_GenerateModel = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemPictureBox)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -88,165 +89,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(352, 379);
             this.tabControl1.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(344, 353);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Creature Sound";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Controls.Add(this.btn_GenerateModel);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(344, 353);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Creature & Model DBC";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.txt_CreatureDisplayId);
-            this.groupBox3.Controls.Add(this.txt_Texture3);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.txt_Texture1);
-            this.groupBox3.Controls.Add(this.txt_Texture2);
-            this.groupBox3.Location = new System.Drawing.Point(13, 86);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(324, 143);
-            this.groupBox3.TabIndex = 26;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "CreatureDisplayInfo Dbc";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 58);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(90, 13);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "Model Texture 1 :";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 89);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 13);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Model Texture 2 :";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 119);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(90, 13);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "Model Texture 3 :";
-            // 
-            // txt_CreatureDisplayId
-            // 
-            this.txt_CreatureDisplayId.Location = new System.Drawing.Point(102, 22);
-            this.txt_CreatureDisplayId.Name = "txt_CreatureDisplayId";
-            this.txt_CreatureDisplayId.Size = new System.Drawing.Size(104, 20);
-            this.txt_CreatureDisplayId.TabIndex = 17;
-            // 
-            // txt_Texture3
-            // 
-            this.txt_Texture3.Location = new System.Drawing.Point(102, 116);
-            this.txt_Texture3.Name = "txt_Texture3";
-            this.txt_Texture3.Size = new System.Drawing.Size(164, 20);
-            this.txt_Texture3.TabIndex = 23;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 25);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(96, 13);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Creature DiplayID :";
-            // 
-            // txt_Texture1
-            // 
-            this.txt_Texture1.Location = new System.Drawing.Point(102, 55);
-            this.txt_Texture1.Name = "txt_Texture1";
-            this.txt_Texture1.Size = new System.Drawing.Size(164, 20);
-            this.txt_Texture1.TabIndex = 21;
-            // 
-            // txt_Texture2
-            // 
-            this.txt_Texture2.Location = new System.Drawing.Point(102, 85);
-            this.txt_Texture2.Name = "txt_Texture2";
-            this.txt_Texture2.Size = new System.Drawing.Size(164, 20);
-            this.txt_Texture2.TabIndex = 22;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.txt_CreatureModelData);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txt_CreatureModelName);
-            this.groupBox2.Location = new System.Drawing.Point(13, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(324, 74);
-            this.groupBox2.TabIndex = 25;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "CreatureModelData Dbc";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 13);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Model Data ID :";
-            // 
-            // txt_CreatureModelData
-            // 
-            this.txt_CreatureModelData.Location = new System.Drawing.Point(102, 13);
-            this.txt_CreatureModelData.Name = "txt_CreatureModelData";
-            this.txt_CreatureModelData.Size = new System.Drawing.Size(120, 20);
-            this.txt_CreatureModelData.TabIndex = 15;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 44);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 13);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Model File Path :";
-            // 
-            // txt_CreatureModelName
-            // 
-            this.txt_CreatureModelName.Location = new System.Drawing.Point(102, 41);
-            this.txt_CreatureModelName.Name = "txt_CreatureModelName";
-            this.txt_CreatureModelName.Size = new System.Drawing.Size(216, 20);
-            this.txt_CreatureModelName.TabIndex = 13;
-            // 
-            // btn_GenerateModel
-            // 
-            this.btn_GenerateModel.Location = new System.Drawing.Point(232, 324);
-            this.btn_GenerateModel.Name = "btn_GenerateModel";
-            this.btn_GenerateModel.Size = new System.Drawing.Size(105, 23);
-            this.btn_GenerateModel.TabIndex = 24;
-            this.btn_GenerateModel.Text = "Generate Model";
-            this.btn_GenerateModel.UseVisualStyleBackColor = true;
-            this.btn_GenerateModel.Click += new System.EventHandler(this.btn_GenerateModel_Click);
             // 
             // tabPage3
             // 
@@ -276,6 +118,37 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Item";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // ItemPictureBox
+            // 
+            this.ItemPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ItemPictureBox.Location = new System.Drawing.Point(285, 147);
+            this.ItemPictureBox.Name = "ItemPictureBox";
+            this.ItemPictureBox.Size = new System.Drawing.Size(56, 58);
+            this.ItemPictureBox.TabIndex = 18;
+            this.ItemPictureBox.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(9, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Item Type :";
+            // 
+            // cbx_ItemType
+            // 
+            this.cbx_ItemType.FormattingEnabled = true;
+            this.cbx_ItemType.Items.AddRange(new object[] {
+            "Mount",
+            "Pet"});
+            this.cbx_ItemType.Location = new System.Drawing.Point(75, 17);
+            this.cbx_ItemType.Name = "cbx_ItemType";
+            this.cbx_ItemType.Size = new System.Drawing.Size(121, 21);
+            this.cbx_ItemType.TabIndex = 16;
+            this.cbx_ItemType.Text = "Mount";
+            this.cbx_ItemType.SelectedIndexChanged += new System.EventHandler(this.cbx_ItemType_SelectedIndexChanged);
             // 
             // btn_ItemGenerate
             // 
@@ -452,36 +325,164 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Spell ID :";
             // 
-            // cbx_ItemType
+            // tabPage2
             // 
-            this.cbx_ItemType.FormattingEnabled = true;
-            this.cbx_ItemType.Items.AddRange(new object[] {
-            "Mount",
-            "Pet"});
-            this.cbx_ItemType.Location = new System.Drawing.Point(75, 17);
-            this.cbx_ItemType.Name = "cbx_ItemType";
-            this.cbx_ItemType.Size = new System.Drawing.Size(121, 21);
-            this.cbx_ItemType.TabIndex = 16;
-            this.cbx_ItemType.Text = "Mount";
-            this.cbx_ItemType.SelectedIndexChanged += new System.EventHandler(this.cbx_ItemType_SelectedIndexChanged);
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.btn_GenerateModel);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(344, 353);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Creature & Model DBC";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // groupBox3
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 21);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Item Type :";
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.txt_CreatureDisplayId);
+            this.groupBox3.Controls.Add(this.txt_Texture3);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.txt_Texture1);
+            this.groupBox3.Controls.Add(this.txt_Texture2);
+            this.groupBox3.Location = new System.Drawing.Point(13, 86);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(324, 143);
+            this.groupBox3.TabIndex = 26;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "CreatureDisplayInfo Dbc";
             // 
-            // ItemPictureBox
+            // label14
             // 
-            this.ItemPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ItemPictureBox.Location = new System.Drawing.Point(285, 147);
-            this.ItemPictureBox.Name = "ItemPictureBox";
-            this.ItemPictureBox.Size = new System.Drawing.Size(56, 58);
-            this.ItemPictureBox.TabIndex = 18;
-            this.ItemPictureBox.TabStop = false;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 58);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(90, 13);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Model Texture 1 :";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 89);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(90, 13);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Model Texture 2 :";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 119);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(90, 13);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Model Texture 3 :";
+            // 
+            // txt_CreatureDisplayId
+            // 
+            this.txt_CreatureDisplayId.Location = new System.Drawing.Point(102, 22);
+            this.txt_CreatureDisplayId.Name = "txt_CreatureDisplayId";
+            this.txt_CreatureDisplayId.Size = new System.Drawing.Size(104, 20);
+            this.txt_CreatureDisplayId.TabIndex = 17;
+            // 
+            // txt_Texture3
+            // 
+            this.txt_Texture3.Location = new System.Drawing.Point(102, 116);
+            this.txt_Texture3.Name = "txt_Texture3";
+            this.txt_Texture3.Size = new System.Drawing.Size(164, 20);
+            this.txt_Texture3.TabIndex = 23;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 25);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(96, 13);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Creature DiplayID :";
+            // 
+            // txt_Texture1
+            // 
+            this.txt_Texture1.Location = new System.Drawing.Point(102, 55);
+            this.txt_Texture1.Name = "txt_Texture1";
+            this.txt_Texture1.Size = new System.Drawing.Size(164, 20);
+            this.txt_Texture1.TabIndex = 21;
+            // 
+            // txt_Texture2
+            // 
+            this.txt_Texture2.Location = new System.Drawing.Point(102, 85);
+            this.txt_Texture2.Name = "txt_Texture2";
+            this.txt_Texture2.Size = new System.Drawing.Size(164, 20);
+            this.txt_Texture2.TabIndex = 22;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.txt_CreatureModelData);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.txt_CreatureModelName);
+            this.groupBox2.Location = new System.Drawing.Point(13, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(324, 74);
+            this.groupBox2.TabIndex = 25;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "CreatureModelData Dbc";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 16);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(82, 13);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Model Data ID :";
+            // 
+            // txt_CreatureModelData
+            // 
+            this.txt_CreatureModelData.Location = new System.Drawing.Point(102, 13);
+            this.txt_CreatureModelData.Name = "txt_CreatureModelData";
+            this.txt_CreatureModelData.Size = new System.Drawing.Size(120, 20);
+            this.txt_CreatureModelData.TabIndex = 15;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 44);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(86, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Model File Path :";
+            // 
+            // txt_CreatureModelName
+            // 
+            this.txt_CreatureModelName.Location = new System.Drawing.Point(102, 41);
+            this.txt_CreatureModelName.Name = "txt_CreatureModelName";
+            this.txt_CreatureModelName.Size = new System.Drawing.Size(216, 20);
+            this.txt_CreatureModelName.TabIndex = 13;
+            // 
+            // btn_GenerateModel
+            // 
+            this.btn_GenerateModel.Location = new System.Drawing.Point(232, 324);
+            this.btn_GenerateModel.Name = "btn_GenerateModel";
+            this.btn_GenerateModel.Size = new System.Drawing.Size(105, 23);
+            this.btn_GenerateModel.TabIndex = 24;
+            this.btn_GenerateModel.Text = "Generate Model";
+            this.btn_GenerateModel.UseVisualStyleBackColor = true;
+            this.btn_GenerateModel.Click += new System.EventHandler(this.btn_GenerateModel_Click);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(344, 353);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Creature Sound";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // FMountOption
             // 
@@ -489,20 +490,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(351, 381);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FMountOption";
-            this.Text = "Callmephil - Lazy Generator (Options)";
+            this.Text = "Lazy Generator (Options)";
             this.Load += new System.EventHandler(this.FMountOption_Load);
             this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemPictureBox)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

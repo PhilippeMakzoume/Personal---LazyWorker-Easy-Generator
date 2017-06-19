@@ -14,10 +14,17 @@ namespace LazyGenerator_V2.Sources.Image
         {
             var request = WebRequest.Create("http://wow.zamimg.com/images/wow/icons/large/" + icon + ".jpg");
 
-            using (var response = request.GetResponse())
-            using (var stream = response.GetResponseStream())
+            try
             {
-                PictureBox.Image = Bitmap.FromStream(stream);
+                using (var response = request.GetResponse())
+                using (var stream = response.GetResponseStream())
+                {
+                    PictureBox.Image = Bitmap.FromStream(stream);
+                }
+            }
+            catch
+            {
+
             }
         }
     }

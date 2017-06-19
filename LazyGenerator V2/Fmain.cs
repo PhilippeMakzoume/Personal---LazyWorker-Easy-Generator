@@ -14,6 +14,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LazyGenerator_V2.Sources.Item;
 
 namespace LazyGenerator_V2
 {
@@ -29,6 +30,7 @@ namespace LazyGenerator_V2
             SpellLibrary.LoadSpellIconLibrary();
             MountLibrary.LoadMountInfoLibrary();
             PetLibrary.LoadPetInfoLibrary();
+            ItemDisplayIconLibrary.LoadMountInfoLibrary();
         }
         // ========================================= Mounts ========================================= //
         private void cbxCustomIcon_CheckedChanged(object sender, EventArgs e)
@@ -38,7 +40,7 @@ namespace LazyGenerator_V2
             else
                 txtm_SpellIconID.Enabled = false;
         }
-        
+
         private void txtm_spellID_TextChanged(object sender, EventArgs e)
         {
             if (cbxParseLocal.Checked)
@@ -62,7 +64,7 @@ namespace LazyGenerator_V2
 
             LoadImageFromUrl.LoadIconFromWoWHead(MountPictureBox, txtm_spellicon.Text);
         }
-        
+
         private void btnSaveDictionary_Click(object sender, EventArgs e)
         {
             string CreatureID, CreatureDisplayID, SpellID, SpellIconName, SpellName, SpellDescription;
@@ -127,7 +129,7 @@ namespace LazyGenerator_V2
                 // todo
             }
         }
-        
+
         private void txtPetIcon_TextChanged(object sender, EventArgs e)
         {
             if (!cbx_custom_icon.Checked)
@@ -223,6 +225,104 @@ namespace LazyGenerator_V2
                 txtExteReqItem1.Text, txtExteReqItemCount1.Text, txtExteReqItem2.Text, txtExteReqItemCount2.Text,
                 txtExteReqItem3.Text, txtExteReqItemCount3.Text, txtExteReqItem4.Text, txtExteReqItemCount4.Text,
                 txtExteReqItem5.Text, txtExteReqItemCount5.Text, txtExteReqPersonalRating.Text);
+        }
+
+        // ========================================= Item Set Generator ========================================= //
+        private void btn_generateTierSet_Click(object sender, EventArgs e)
+        {
+            string NameHead, NameShoulder, NameChest, NameHands, NameLegs;
+            string DisplayHead, DisplayShoulder, DisplayChest, DisplayHands, DisplayLegs;
+            string BaseEntry, Class;
+            string type;
+            float Coeficient;
+            int itemsetID = int.Parse(txtTierSetID.Text);
+            int quality = 0, Flag = 0;
+            // Name
+            NameHead = txt_ItemSetHead.Text.Replace("'", "\\'");
+            NameShoulder = txt_ItemSetShoulder.Text.Replace("'", "\\'");
+            NameChest = txt_ItemSetChest.Text.Replace("'", "\\'");
+            NameHands = txt_ItemSetHand.Text.Replace("'", "\\'");
+            NameLegs = txt_ItemSetLegs.Text.Replace("'", "\\'");
+            // Entry
+            BaseEntry = txt_ItemSetBaseEntry.Text;
+            // DisplayID
+            DisplayHead = txt_ItemSetDHead.Text;
+            DisplayShoulder = txt_ItemSetDShoulder.Text;
+            DisplayChest = txt_ItemSetDChest.Text;
+            DisplayHands = txt_ItemSetDHand.Text;
+            DisplayLegs = txt_ItemSetDLegs.Text;
+            // ComboBox
+            Class = cbx_ItemSetClass.Text;
+            Coeficient = float.Parse(cbx_ItemSetBaseMultiplier.Text.Replace("x", ""));
+            type = cbx_itemsetType.Text;
+            
+
+            switch (cbx_ItemSetQuality.Text)
+            {
+                case "Poor":
+                    quality = 1;
+                    break;
+                case "Common":
+                    quality = 2;
+                    break;
+                case "Rare":
+                    quality = 3;
+                    break;
+                case "Epic":
+                    quality = 4;
+                    break;
+                case "Legendary":
+                    quality = 5;
+                    break;
+            }
+
+            switch (cbx_ItemSetFlags.Text)
+            {
+                case "Normal":
+                    Flag = 4096;
+                    break;
+                case "Heroic":
+                    Flag = 4104;
+                        break;
+            }
+
+            if (type == "PvE")
+                ItemSetGenerator.GenerateTierSetPvE(NameHead, NameShoulder, NameChest, NameHands, NameLegs, DisplayHead, DisplayShoulder, DisplayChest, DisplayHands, DisplayLegs,
+                    BaseEntry, Class,Coeficient, itemsetID, int.Parse(txt_TierSetILvL.Text), quality, Flag);
+            else
+                ItemSetGenerator.GenerateTierSetPvP(NameHead, NameShoulder, NameChest, NameHands, NameLegs, DisplayHead, DisplayShoulder, DisplayChest, DisplayHands, DisplayLegs,
+                BaseEntry, Class, Coeficient, itemsetID, int.Parse(txt_TierSetILvL.Text));
+
+        }
+
+        private void txt_ItemSetDChest_TextChanged(object sender, EventArgs e)
+        {
+            string ItemIcon = ItemDisplayIconLibrary.GetIconName(txt_ItemSetDChest.Text);
+            LoadImageFromUrl.LoadIconFromWoWHead(pbx_Chest, ItemIcon);
+        }
+
+        private void txt_ItemSetDShoulder_TextChanged(object sender, EventArgs e)
+        {
+            string ItemIcon = ItemDisplayIconLibrary.GetIconName(txt_ItemSetDShoulder.Text);
+            LoadImageFromUrl.LoadIconFromWoWHead(pbx_Shoulder, ItemIcon);
+        }
+
+        private void txt_ItemSetDHead_TextChanged(object sender, EventArgs e)
+        {
+            string ItemIcon = ItemDisplayIconLibrary.GetIconName(txt_ItemSetDHead.Text);
+            LoadImageFromUrl.LoadIconFromWoWHead(pbx_Head, ItemIcon);
+        }
+
+        private void txt_ItemSetDHand_TextChanged(object sender, EventArgs e)
+        {
+            string ItemIcon = ItemDisplayIconLibrary.GetIconName(txt_ItemSetDHand.Text);
+            LoadImageFromUrl.LoadIconFromWoWHead(pbx_Hand, ItemIcon);
+        }
+
+        private void txt_ItemSetDLegs_TextChanged(object sender, EventArgs e)
+        {
+            string ItemIcon = ItemDisplayIconLibrary.GetIconName(txt_ItemSetDLegs.Text);
+            LoadImageFromUrl.LoadIconFromWoWHead(pbx_Legs, ItemIcon);
         }
     }
 }

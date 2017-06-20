@@ -223,6 +223,8 @@
             this.label64 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
             this.cbx_ItemSetFlags = new System.Windows.Forms.ComboBox();
+            this.cbx_itemsetspec = new System.Windows.Forms.ComboBox();
+            this.label66 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.groupBox20.SuspendLayout();
@@ -506,6 +508,8 @@
             // 
             // groupBox18
             // 
+            this.groupBox18.Controls.Add(this.label66);
+            this.groupBox18.Controls.Add(this.cbx_itemsetspec);
             this.groupBox18.Controls.Add(this.label34);
             this.groupBox18.Controls.Add(this.label33);
             this.groupBox18.Controls.Add(this.label32);
@@ -2305,6 +2309,31 @@
             this.cbx_ItemSetFlags.TabIndex = 26;
             this.cbx_ItemSetFlags.Text = "Normal";
             // 
+            // cbx_itemsetspec
+            // 
+            this.cbx_itemsetspec.FormattingEnabled = true;
+            this.cbx_itemsetspec.Items.AddRange(new object[] {
+            "DPS",
+            "Heal",
+            "Tank",
+            "--------------",
+            "Enhancement",
+            "Feral"});
+            this.cbx_itemsetspec.Location = new System.Drawing.Point(278, 23);
+            this.cbx_itemsetspec.Name = "cbx_itemsetspec";
+            this.cbx_itemsetspec.Size = new System.Drawing.Size(74, 21);
+            this.cbx_itemsetspec.TabIndex = 44;
+            this.cbx_itemsetspec.Text = "DPS";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(194, 26);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(78, 13);
+            this.label66.TabIndex = 45;
+            this.label66.Text = "Specialization :";
+            // 
             // Fmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2575,6 +2604,8 @@
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.ComboBox cbx_ItemSetQuality;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.ComboBox cbx_itemsetspec;
     }
 }
 

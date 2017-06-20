@@ -230,7 +230,7 @@ namespace LazyGenerator_V2
         // ========================================= Item Set Generator ========================================= //
         private void btn_generateTierSet_Click(object sender, EventArgs e)
         {
-            string NameHead, NameShoulder, NameChest, NameHands, NameLegs;
+            string NameHead, NameShoulder, NameChest, NameHands, NameLegs, Spec;
             string DisplayHead, DisplayShoulder, DisplayChest, DisplayHands, DisplayLegs;
             string BaseEntry, Class;
             string type;
@@ -255,6 +255,7 @@ namespace LazyGenerator_V2
             Class = cbx_ItemSetClass.Text;
             Coeficient = float.Parse(cbx_ItemSetBaseMultiplier.Text.Replace("x", ""));
             type = cbx_itemsetType.Text;
+            Spec = cbx_itemsetspec.Text;
             
 
             switch (cbx_ItemSetQuality.Text)
@@ -288,7 +289,7 @@ namespace LazyGenerator_V2
 
             if (type == "PvE")
                 ItemSetGenerator.GenerateTierSetPvE(NameHead, NameShoulder, NameChest, NameHands, NameLegs, DisplayHead, DisplayShoulder, DisplayChest, DisplayHands, DisplayLegs,
-                    BaseEntry, Class,Coeficient, itemsetID, int.Parse(txt_TierSetILvL.Text), quality, Flag);
+                    BaseEntry, Class,Coeficient, itemsetID, int.Parse(txt_TierSetILvL.Text), quality, Flag, Spec);
             else
                 ItemSetGenerator.GenerateTierSetPvP(NameHead, NameShoulder, NameChest, NameHands, NameLegs, DisplayHead, DisplayShoulder, DisplayChest, DisplayHands, DisplayLegs,
                 BaseEntry, Class, Coeficient, itemsetID, int.Parse(txt_TierSetILvL.Text));
